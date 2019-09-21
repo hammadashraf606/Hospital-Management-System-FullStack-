@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function submitfunction()
+        {
+            var x=document.forms["myForm"]["user"].value;
+            var y=document.forms["myForm"]["password"].value;
+            if(x=="admin")
+            {
+                if(y=="admin")
+                {
+                    alert("login success");
+                    window.open('Login');
+
+
+                }
+
+
+            }
+        }
+
+    </script>
+    <style>
+        .login{
+            position: absolute;
+            top: calc(50% - 75px);
+            left: calc(50% - 50px);
+            height: 150px;
+            width: 350px;
+            padding: 10px;
+            z-index: 2;
+        }
+
+        .login input[type=text]{
+            width: 250px;
+            height: 30px;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 2px;
+            color: #fff;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 4px;
+        }
+
+        .login input[type=password]{
+            width: 250px;
+            height: 30px;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 2px;
+            color: #fff;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 4px;
+            margin-top: 10px;
+        }
+
+        .login input[type=submit]{
+            width: 260px;
+            height: 35px;
+            background: #fff;
+            border: 1px solid #fff;
+            cursor: pointer;
+            border-radius: 2px;
+            color: #a18d6c;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 6px;
+            margin-top: 10px;
+        }
+
+        .login input[type=submit]:hover{
+            opacity: 0.8;
+        }
+
+        .login input[type=submit]:active{
+            opacity: 0.6;
+        }
+
+        .login input[type=text]:focus{
+            outline: none;
+            border: 1px solid rgba(255,255,255,0.9);
+        }
+
+        .login input[type=password]:focus{
+            outline: none;
+            border: 1px solid rgba(255,255,255,0.9);
+        }
+
+        .login input[type=submit]:focus{
+            outline: none;
+        }
+
+        ::-webkit-input-placeholder{
+            color: rgba(255,255,255,0.6);
+        }
+
+
+        body {margin:0;}
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px; /* Used in this example to enable scrolling */
+
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+
+<body>
+{{{ body }}}
+</body>
+</html>

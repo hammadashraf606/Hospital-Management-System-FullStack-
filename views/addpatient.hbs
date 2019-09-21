@@ -1,0 +1,148 @@
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'
+          type='text/css' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800'
+          rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- ============ Add custom CSS here ============ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+
+        function validate() {
+            var key=window.event.keyCode;
+            var allowed='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ :;,.?!£$%^&*()_+-*{}@~<>&"\'';
+
+            return allowed.indexOf(String.fromCharCode(key)) !=-1 ;
+        };
+
+        function validatephone()
+        {
+            var key=window.event.keyCode;
+            var allowed='0123456789';
+
+            return allowed.indexOf(String.fromCharCode(key)) !=-1 ;
+        };
+
+        function ValidateEmail(mail)
+        {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        };
+        function ValidateEmail(mail)
+        {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+            {
+                return (true)
+            }
+            alert("You have entered an invalid email address!")
+            return (false)
+        }
+
+        function hasNumber(myString) {
+            return /\d/.test(myString);
+        }
+
+        function isNumber(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+    </script>
+
+
+</head>
+
+<body style="background: #355C7D;   /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/bloodmain">Blood Donation</a>
+    <a href="/contact">Contact Us</a>
+</div>
+
+    <section class="insert">
+            <div class="container">
+                <form action="/insert" method="post" class="form-group" style="margin-left: 450px;">
+
+                    <h3 style="font-size: 50px;" style="margin-left: 110px;"><i>Insert Patient  Data</i></h3>
+                    <br>
+
+                    <br>
+                    <div class="form-group" style="margin-right: 450px;">
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+
+                                <input type="text" id="name" style="margin-right: 5px;" placeholder="First Name" class="form-control"  name="name" style="margin-left: 20px;"required onkeypress="return validate();">
+
+                            </div>
+                        </div>
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group" style="margin-right: 450px;">
+                        <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" id="title"  style="margin-right: 5px;"placeholder="Age" class="form-control" name="title" style="margin-left: 20px;"required onkeypress="return validatephone();">
+                            </div>
+                        </div>
+
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group" style="margin-right: 450px;">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" id="content"placeholder="Gender" class="form-control" name="content" required onkeypress="return validate();">
+
+                            </div>
+                        </div>
+
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group" style="margin-right: 450px;">
+                        <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input type="text" id="author"style="margin-right: 5px;" placeholder="House no Street no" class="form-control"  style="margin-left: 20px;"name="author" required>
+
+
+                            </div>
+                        </div>
+
+                    <div class="form-group" style="margin-right: 450px;">
+                           <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                <input type="text"style="margin-right: 5px;" id="gender"style="margin-left: 20px;" placeholder="Contact no" class="form-control" required name="gender"onkeypress="return validatephone();">
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group"style="margin-left: 550px;">
+                        <div class="col-md-4"><br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                        </div>
+                    </div>
+
+                    </fieldset>
+                </form>
+            </div>
+
+    </section>
+
+</body>
+</html>
